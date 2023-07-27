@@ -16,7 +16,7 @@ public class UserDAOImpl implements UserDAO {
     public User login(User user) {
         String sql ="select * from user where username=? and password=?";
         try{
-            user = qr.query(sql,new BeanHandler<>(User.class),user.getUserName(),
+            user = qr.query(sql,new BeanHandler<>(User.class),user.getUsername(),
                     user.getPassword());
         }
         catch (SQLException e)
@@ -43,7 +43,7 @@ public class UserDAOImpl implements UserDAO {
     public boolean addUser(User user) {
         String sql ="insert into user values(?,?,?)";
         try{
-            int result = qr.update(sql,user.getId(),user.getUserName(),user.getPassword());
+            int result = qr.update(sql,user.getId(),user.getUsername(),user.getPassword());
             return  result>0;
         }
         catch (SQLException e)

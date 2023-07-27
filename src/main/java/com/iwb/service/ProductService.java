@@ -1,4 +1,4 @@
 package com.iwb.service;
 
-public class ProductService {
+public interface ProductService {
 }

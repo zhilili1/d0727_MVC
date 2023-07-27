@@ -1,4 +1,9 @@
 package com.iwb.service;
 
-public class CategoryService {
+import com.iwb.pojo.Category;
+
+import java.util.List;
+
+public interface CategoryService {
+    List<Category> list();
 }

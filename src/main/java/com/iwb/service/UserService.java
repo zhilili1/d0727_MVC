@@ -1,4 +1,7 @@
 package com.iwb.service;
 
-public class UserService {
+import com.iwb.pojo.User;
+
+public interface UserService {
+    User login(User user);
 }

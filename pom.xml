@@ -26,27 +26,32 @@
     <version>4.11</version>
     <scope>test</scope>
   </dependency>
+<!--    servlet依赖-->
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
       <version>3.0.1</version>
     </dependency>
+<!--    lombok依赖-->
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <version>1.16.10</version>
       <scope>provided</scope>
     </dependency>
+<!--    mysql依赖-->
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
       <version>5.0.8</version>
     </dependency>
+<!--    servlet的jsp依赖-->
     <dependency>
       <groupId>javax.servlet.jsp</groupId>
       <artifactId>javax.servlet.jsp-api</artifactId>
       <version>2.3.3</version>
     </dependency>
+<!--    jstl语句依赖-->
     <dependency>
       <groupId>jstl</groupId>
       <artifactId>jstl</artifactId>
@@ -57,16 +62,19 @@
       <artifactId>standard</artifactId>
       <version>1.1.2</version>
     </dependency>
+<!--    -->
     <dependency>
       <groupId>commons-beanutils</groupId>
       <artifactId>commons-beanutils</artifactId>
       <version>1.9.4</version>
     </dependency>
+<!--    -->
     <dependency>
       <groupId>com.alibaba</groupId>
       <artifactId>druid</artifactId>
       <version>1.2.9</version>
     </dependency>
+<!--    -->
     <dependency>
       <groupId>commons-dbutils</groupId>
       <artifactId>commons-dbutils</artifactId>
