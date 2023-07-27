@@ -5,6 +5,7 @@ import com.iwb.pojo.User;
 import com.iwb.util.DruidUtil;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
+import org.apache.commons.dbutils.handlers.ScalarHandler;
 
 import java.sql.SQLException;
 
@@ -27,11 +28,28 @@ public class UserDAOImpl implements UserDAO {
 
     @Override
     public boolean verifyUsername(String username) {
+        String  sql ="select count(*) from user where username =?";
+        try {
+            Number number = (Number)qr.query(sql,new ScalarHandler<>(),username);
+            return number.intValue()>0;
+        }catch (SQLException e)
+        {
+            e.printStackTrace();
+        }
         return false;
     }
 
     @Override
     public boolean addUser(User user) {
+        String sql ="insert into user values(?,?,?)";
+        try{
+            int result = qr.update(sql,user.getId(),user.getUserName(),user.getPassword());
+            return  result>0;
+        }
+        catch (SQLException e)
+        {
+            e.printStackTrace();
+        }
         return false;
     }
 }
