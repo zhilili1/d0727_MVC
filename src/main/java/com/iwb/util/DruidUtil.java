@@ -14,6 +14,7 @@ public class DruidUtil {
                 DruidUtil.class.getClassLoader().
                         getResourceAsStream("db.properties");
         //加载配置文件
+
         Properties p =new Properties();
         try {
             p.load(inputStream);
