@@ -11,7 +11,6 @@ public class MD5Util {
             byte [] result =digest.digest(password.getBytes());
             StringBuilder builder =new StringBuilder();
             //每个字节与0xff做与运输
-
             for (byte b:result) {
                 int number =b&0xff;
                 String str =Integer.toHexString(number);
