@@ -10,4 +10,5 @@ public interface CategoryDAO {
     boolean delete(String id);
     boolean update(Category category);
     Category get(String id);
+    boolean verifyUsername(String username);
 }

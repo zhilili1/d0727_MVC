@@ -42,7 +42,7 @@
     </div>
     <div class="row clearfix">
         <div class="col-md-1 column">
-            <img alt="140x140" src="imgs/kun.jpg" class="img-circle kun" />
+            <img alt="140x140" src="imgs/aili.PNG" class="img-circle kun" />
         </div>
         <div class="col-md-10 column">
             <form class="form-horizontal" role="form" action="login" method="post">
@@ -66,7 +66,7 @@
             </form>
         </div>
         <div class="col-md-1 column">
-            <img alt="140x140" src="imgs/kun.jpg" class="img-circle kun" />
+            <img alt="140x140" src="imgs/aili.PNG" class="img-circle kun" />
         </div>
     </div>
     <div class="row clearfix">

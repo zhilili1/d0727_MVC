@@ -13,6 +13,9 @@
     <title>Title</title>
 </head>
 <body>
+<c:if test="${!(empty categorya)}">
+    ${categorya}
+</c:if><br>
 <table>
     <tr>
         <td>id</td>
@@ -23,7 +26,7 @@
     <c:forEach items="${cs}" var="c" varStatus="st">
         <tr>
             <td>${c.id}</td>
-            <td>${c.name}</td>
+            <td><a href="listProduct?name=${c.name}">${c.name}</a>></td>
             <td><a href="editCategory?id=${c.id}">编辑</a></td>
             <td><a href="deleteCategory?id=${c.id}">删除</a></td>
 

@@ -36,7 +36,8 @@ public class LoginServlet extends HttpServlet {
             }
             else
             {
-
+                req.getSession().removeAttribute("errMsg");
+                req.getSession().setAttribute("user",user);
                 req.getRequestDispatcher("main.jsp").forward(req,resp);
             }
         }

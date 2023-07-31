@@ -1,8 +1,9 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: zhili
   Date: 2023/7/27
-  Time: 14:45
+  Time: 19:17
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java"
@@ -12,11 +13,12 @@
     <title>Title</title>
 </head>
 <body>
-<p>
-    欢迎你,尊敬的用户${user.username}<br>
-    <a href="listCategory">点击此处可以查看商品分类</a><br>
-    <a href="exitLogin">退出登录</a>
-</p>
 
+<form action="updateCategory" method="post">
+请输入你要修改的分类名:
+<input type="hidden" value="${c.id}" name="id"><br>
+<input type="text" name="name" value="${c.name}"><br>
+<input type="submit" value="修改">
+</form>
 </body>
 </html>

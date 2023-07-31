@@ -6,11 +6,25 @@ import com.iwb.util.DruidUtil;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
+import org.apache.commons.dbutils.handlers.ScalarHandler;
 
 import java.sql.SQLException;
 import java.util.List;
 
 public class CategoryDAOImpl implements CategoryDAO {
+    @Override
+    public boolean verifyUsername(String username) {
+        String  sql ="select count(*) from category where name =?";
+        try {
+            Number number = (Number)qr.query(sql,new ScalarHandler<>(),username);
+            return number.intValue()>0;
+        }catch (SQLException e)
+        {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
     private QueryRunner qr =new QueryRunner(DruidUtil.getDataSource());
     @Override
     public List<Category> list() {

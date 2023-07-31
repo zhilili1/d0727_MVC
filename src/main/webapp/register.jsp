@@ -15,8 +15,10 @@
     <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
+<c:if test="${!(empty registera)}">
+    ${registera}
+</c:if>
 <div class="container">
-
     <form class="form-signin" action="register" method="post">
         <h2 class="form-signin-heading">请注册</h2>
         <label for="username" class="sr-only">用户名:</label>
