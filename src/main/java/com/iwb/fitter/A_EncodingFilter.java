@@ -18,7 +18,6 @@ public class A_EncodingFilter implements Filter {
         HttpServletResponse resp =(HttpServletResponse)servletResponse;
         req.setCharacterEncoding("UTF-8");
         filterChain.doFilter(req,resp);
-
     }
 
     @Override
